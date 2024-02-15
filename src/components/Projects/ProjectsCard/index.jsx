@@ -7,7 +7,7 @@ const ProjectsCard = ({ project }) => {
 
   return (
     <div className={`projects__card ${darkMode && "projects__card__dark"}`}>
-      <img className="projects__card__img" src={project.img} />
+      <img className="projects__card__img" src={project.img} alt="project"/>
       <div className="projects__card__container">
         <div className="projects__card__info">
           <span className="projects__card__info__title">{project.title}</span>

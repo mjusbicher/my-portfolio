@@ -44,11 +44,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar scroll={scroll}/>
+      <Navbar scroll={scroll} />
       <Parallax
         ref={parallax}
         key={width}
-        pages={5.8}
+        pages={width < 450 ? 6.1 : 5.8}
         style={{ height: "calc(100% - 70px)" }}
       >
         <ParallaxLayer
@@ -84,10 +84,12 @@ function App() {
           <img
             src={Cloud}
             style={{ display: "block", width: "20%", marginLeft: "55%" }}
+            alt="cloud"
           />
           <img
             src={Cloud}
             style={{ display: "block", width: "10%", marginLeft: "15%" }}
+            alt="cloud"
           />
         </ParallaxLayer>
 
@@ -95,24 +97,28 @@ function App() {
           <img
             src={Cloud}
             style={{ display: "block", width: "20%", marginLeft: "70%" }}
+            alt="cloud"
           />
           <img
             src={Cloud}
             style={{ display: "block", width: "20%", marginLeft: "40%" }}
+            alt="cloud"
           />
           <ParallaxLayer offset={2} speed={0.2} style={{ opacity: 0.4 }}>
             <img
               src={Cloud}
               style={{ display: "block", width: "10%", marginLeft: "10%" }}
+              alt="cloud"
             />
             <img
               src={Cloud}
               style={{ display: "block", width: "20%", marginLeft: "75%" }}
+              alt="cloud"
             />
           </ParallaxLayer>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={width < 450 ? 4.6 : 5}
+          offset={width < 450 ? 4.8 : 5}
           speed={-0.3}
           style={{
             display: "flex",
@@ -124,22 +130,19 @@ function App() {
           <img
             src={Forest}
             style={{ width: "calc(100% + 150px)", marginLeft: "-150px" }}
+            alt="forest"
           />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={0}
-          speed={0.1}
-          factor={1}
-        >
+        <ParallaxLayer offset={0} speed={0.1} factor={1}>
           <Main />
         </ParallaxLayer>
         <ParallaxLayer offset={1.8} speed={0.1}>
           <Experience />
         </ParallaxLayer>
-        <ParallaxLayer offset={width < 450 ? 4 : 3.6} speed={0.1}>
+        <ParallaxLayer offset={width < 450 ? 4.2 : 3.6} speed={0.1}>
           <Projects />
         </ParallaxLayer>
-        <ParallaxLayer offset={width < 450 ? 5.2 : 5} speed={0.1}>
+        <ParallaxLayer offset={width < 450 ? 5.4 : 5} speed={0.1}>
           <Footer />
         </ParallaxLayer>
       </Parallax>
