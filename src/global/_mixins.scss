@@ -1,0 +1,45 @@
+@mixin breakpoint($point, $value: 0) {
+  @if $point == "small" {
+    @media (min-width: 320px) { @content; }
+  }
+
+  @else if $point == "medium" {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $point == "medium-large" {
+    @media (min-width: 1024px) { @content; }
+  }
+
+  @else if $point == "large" {
+    @media (min-width: 1280px) { @content; }
+  }
+
+  @else if $point == "extra-large" {
+    @media (min-width: 1440px) { @content; }
+  }
+
+  @else if $point == "super-extra-large" {
+    @media (min-width: 1680px) { @content; }
+  }
+
+  @else if $point == "iphone5" {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+    and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
+    and (orientation:portrait){ @content; }
+  }
+
+  @else if $point == "iphone6" {
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+    and (orientation : portrait) and (device-aspect-ratio : 375/667)
+    and (-webkit-min-device-pixel-ratio : 2){ @content;}
+  }
+
+  @else if $point == "burger-menu" {
+    @media (max-width: 768px) { @content; }
+  }
+
+  @else {
+    @media ($point: $value) { @content; }
+  }
+}

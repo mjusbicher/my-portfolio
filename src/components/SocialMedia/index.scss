@@ -1,0 +1,27 @@
+.social-media{
+  &__burger{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    padding: 0 40px;
+    margin: auto;
+  }
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+
+  &__icons {
+    color: white;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px transparent);
+    transition: all 0.5s;
+
+    &:hover {
+      filter: drop-shadow(2px 2px 2px #ffffff);
+    }
+  }
+}

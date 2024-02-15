@@ -1,0 +1,55 @@
+.experience {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20%;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__job {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      max-width: 900px;
+      gap: 10px;
+      word-spacing: 0.1em;
+      padding-left: 10px;
+      border-left: 2px solid rgb(0, 0, 0);
+      position: relative;
+      &__dark{
+        border-left: 2px solid rgb(255, 255, 255);
+      }
+    }
+    &__title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    &__info {
+      font-size: 18px;
+    }
+    &__description {
+      text-wrap: balance;
+    }
+
+    &__icon {
+      // background: linear-gradient(#121634 0%, #2e3ca5 100%) padding-box,
+      //   linear-gradient(150deg, #2e3ca5, #cbcbcb, #3f65ff) border-box;
+      // background-attachment: fixed;
+      // background-color: #87BCDE;
+      z-index: 9;
+      position: absolute;
+      top: 38px;
+      left: -9px;
+      content: "";
+    }
+  }
+}

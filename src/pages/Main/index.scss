@@ -1,0 +1,65 @@
+@import "../../global/mixins";
+
+.main {
+  &__container {
+    margin-top: 25%;
+    min-height: 600px;
+  }
+  &__profile-container {
+    margin: 0 auto;
+    border: 2px solid transparent;
+    width: 300px;
+    height: 290px;
+    border-radius: 15px;
+    &__img {
+      width: 290px;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    &__desktop {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__1 {
+      font-size: 20px;
+    }
+    &__2 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    &__3 {
+      font-size: 16px;
+      text-wrap: balance;
+    }
+  }
+}
+
+@include breakpoint("medium-large") {
+  .main {
+    &__container {
+      margin-top: 15%;
+    }
+    &__text {
+      &__desktop {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@include breakpoint("large") {
+  .main {
+    &__container {
+      margin-top: 20%;
+    }
+  }
+}
