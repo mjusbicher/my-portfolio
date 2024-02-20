@@ -36,7 +36,8 @@ Start the server
 
 ## Features
 
-- Light/Dark mode toggle
+- Light/Dark theme toggle
+- English/Spanish texts toggle
 - Mobile mode
 - Parallax effect
 
