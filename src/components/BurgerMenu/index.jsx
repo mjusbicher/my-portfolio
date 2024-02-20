@@ -93,7 +93,7 @@ const BurgerMenu = ({ scroll }) => {
           <span
             onClick={() => {
               updateMenu();
-              scroll(width < 450 ? 4 : 3.5);
+              scroll(width < 450 ? 4.7 : 4.7);
             }}
             className={`menu-sections ${darkMode && "menu-sections__dark"}`}
           >

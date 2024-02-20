@@ -16,6 +16,7 @@ import { ThemeContext } from "./context/ThemeContext";
 function App() {
   const { darkMode } = useContext(ThemeContext);
   const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
   const parallax = useRef(null);
 
   const scroll = (number) => {
@@ -24,9 +25,13 @@ function App() {
     }
   };
 
+  console.log(height, width)
+
+
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
@@ -48,7 +53,8 @@ function App() {
       <Parallax
         ref={parallax}
         key={width}
-        pages={width < 450 ? 6.1 : 5.8}
+        // pages={width < 450 ? 6.1 : 5.8}
+        pages={height < 700 ? 7.4 : height < 1000 ? 6.9 : 5.2}
         style={{ height: "calc(100% - 70px)" }}
       >
         <ParallaxLayer
@@ -118,7 +124,8 @@ function App() {
           </ParallaxLayer>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={width < 450 ? 4.8 : 5}
+          // offset={width < 450 ? 4.8 : 5}
+          offset={height < 700 ? 6.3 : height < 1000 ? 5.7 : 4.2}
           speed={-0.3}
           style={{
             display: "flex",
@@ -139,10 +146,17 @@ function App() {
         <ParallaxLayer offset={1.8} speed={0.1}>
           <Experience />
         </ParallaxLayer>
-        <ParallaxLayer offset={width < 450 ? 4.2 : 3.6} speed={0.1}>
+        <ParallaxLayer 
+        // offset={width < 450 ? 4.2 : 3.6} 
+        offset={height < 700 ? 5 : height < 1000 ? 4.8 : 3.2}
+        
+        speed={0.1}>
           <Projects />
         </ParallaxLayer>
-        <ParallaxLayer offset={width < 450 ? 5.4 : 5} speed={0.1}>
+        <ParallaxLayer 
+        // offset={width < 450 ? 5.4 : 5} 
+        offset={height < 700 ? 6.6 : height < 1000 ? 6.1 : 4.7}
+        speed={0.1}>
           <Footer />
         </ParallaxLayer>
       </Parallax>
