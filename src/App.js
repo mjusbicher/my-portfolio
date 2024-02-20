@@ -25,9 +25,6 @@ function App() {
     }
   };
 
-  console.log(height, width)
-
-
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);

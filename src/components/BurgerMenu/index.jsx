@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import SocialMedia from "../SocialMedia";
 import { ThemeContext } from "../../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const BurgerMenu = ({ scroll }) => {
   const { darkMode } = useContext(ThemeContext);
@@ -13,6 +14,7 @@ const BurgerMenu = ({ scroll }) => {
   const [hasHamburguer, setHasHamburguer] = useState(
     width > 768 ? false : true
   );
+  const { t } = useTranslation();
 
   const updateMenu = () => {
     if (!!hasHamburguer) {
@@ -70,7 +72,7 @@ const BurgerMenu = ({ scroll }) => {
             }}
             className={`menu-sections ${darkMode && "menu-sections__dark"}`}
           >
-            HOME
+            {t("navbarHome")}
           </span>
           <span
             onClick={() => {
@@ -79,7 +81,7 @@ const BurgerMenu = ({ scroll }) => {
             }}
             className={`menu-sections ${darkMode && "menu-sections__dark"}`}
           >
-            ABOUT ME
+             {t("navbarAbout")}
           </span>
           <span
             onClick={() => {
@@ -88,7 +90,7 @@ const BurgerMenu = ({ scroll }) => {
             }}
             className={`menu-sections ${darkMode && "menu-sections__dark"}`}
           >
-            EXPERIENCE
+             {t("navbarExperience")}
           </span>
           <span
             onClick={() => {
@@ -97,7 +99,7 @@ const BurgerMenu = ({ scroll }) => {
             }}
             className={`menu-sections ${darkMode && "menu-sections__dark"}`}
           >
-            PROJECTS
+             {t("navbarProjects")}
           </span>
         </div>
         {isMenuClicked && <SocialMedia isBurger={true} darkMode={darkMode} />}

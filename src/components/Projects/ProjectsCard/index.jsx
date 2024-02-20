@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { ThemeContext } from "../../../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const ProjectsCard = ({ project }) => {
   const { darkMode } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <div className={`projects__card ${darkMode && "projects__card__dark"}`}>
@@ -22,7 +24,7 @@ const ProjectsCard = ({ project }) => {
           onClick={() => window.open(project.link, "_blank")}
         >
           <FaExternalLinkAlt />
-          <span>Visit Website</span>
+          <span>{t("projectsLink")}</span>
         </div>
       </div>
     </div>

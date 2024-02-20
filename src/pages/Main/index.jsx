@@ -4,9 +4,11 @@ import "./index.scss";
 import SocialMedia from "../../components/SocialMedia";
 import AboutMe from "../../components/AboutMe";
 import { ThemeContext } from "../../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
   const { darkMode } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <div className="main">
@@ -20,13 +22,12 @@ const Main = () => {
         </div>
         <div className="main__text">
           <div className="main__text__desktop">
-            <span className="main__text__1">Hi! My name is</span>
+            <span className="main__text__1">{t("title")}</span>
             <span className="main__text__2">
               Martin <span style={{ color: "#3f65ff" }}>Jusbicher</span>
             </span>
             <span className="main__text__3">
-              I'm a 25 years old Full Stack Developer from Buenos Aires,
-              Argentina.
+              {t("description")}
             </span>
           </div>
           <SocialMedia darkMode={darkMode} />
