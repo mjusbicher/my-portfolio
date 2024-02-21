@@ -28,7 +28,7 @@ const Navbar = ({ scroll }) => {
               onClick={() => setDarkMode((prev) => !prev)}
               onMouseOver={() => setPopoverTheme(true)}
               onMouseOut={() => setPopoverTheme(false)}
-              style={{ cursor: "pointer" }}
+              className={`navbar__icon ${darkMode && "navbar__icon__dark"}`}
             />
           ) : (
             <CiDark
@@ -37,7 +37,7 @@ const Navbar = ({ scroll }) => {
               onClick={() => setDarkMode((prev) => !prev)}
               onMouseOver={() => setPopoverTheme(true)}
               onMouseOut={() => setPopoverTheme(false)}
-              style={{ cursor: "pointer" }}
+              className={`navbar__icon ${darkMode && "navbar__icon__dark"}`}
             />
           )}
           <div
@@ -46,9 +46,7 @@ const Navbar = ({ scroll }) => {
             }`}
           >
             <span
-              className={`navbar__language ${
-                darkMode && "navbar__language__dark"
-              }`}
+              className={`navbar__icon ${darkMode && "navbar__icon__dark"}`}
               style={{ padding: 0, margin: 0 }}
               onClick={() => setLang((prev) => !prev)}
               onMouseOver={() => setPopoverLanguage(true)}

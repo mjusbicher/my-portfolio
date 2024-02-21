@@ -25,40 +25,14 @@
       }
     }
     &__popover {
-      position: absolute;
-      height: 35px;
-      width: 130px;
-      background: #ffffff;
-      padding: 2px;
-      left: 50px;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      font-size: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      color: #000000;
-    }
-    &__popover::before {
-      position: absolute;
-      z-index: 1;
-      content: "";
-      left: -8px;
-      top: 21%;
-      border-style: solid;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-right: 10px solid rgb(255, 255, 255);
-      border-left: 0px;
-      transition-duration: 0.3s;
-      transition-property: transform;
+      display: none;
     }
   }
-  &__language {
-    cursor: pointer;
+  &__icon {
     filter: drop-shadow(2px 2px 2px transparent);
     transition: all 0.5s;
     font-size: 22px;
+    cursor: pointer;
     &:hover {
       filter: drop-shadow(2px 2px 2px #000000);
     }
@@ -78,7 +52,38 @@
 
 @include breakpoint("medium") {
   .navbar {
-    &__language {
+    &__icons {
+      &__popover {
+        position: absolute;
+        height: 35px;
+        width: 130px;
+        background: #ffffff;
+        padding: 2px;
+        left: 50px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: #000000;
+      }
+      &__popover::before {
+        position: absolute;
+        z-index: 1;
+        content: "";
+        left: -8px;
+        top: 21%;
+        border-style: solid;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid rgb(255, 255, 255);
+        border-left: 0px;
+        transition-duration: 0.3s;
+        transition-property: transform;
+      }
+    }
+    &__icon {
       font-size: 16px;
     }
   }
