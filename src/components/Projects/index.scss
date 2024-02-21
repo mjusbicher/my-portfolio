@@ -16,12 +16,12 @@
     background-color: #8d8d8dab;
     background-attachment: fixed;
     margin-bottom: 30px;
-    
-    &__dark{
+
+    &__dark {
       background-color: #0b0d0fab;
     }
 
-    &__container{
+    &__container {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,11 +43,11 @@
       &__title {
         font-weight: bold;
       }
-      
+
       &__description {
         font-size: 12px;
       }
-      
+
       &__button {
         display: flex;
         align-items: center;
@@ -58,9 +58,17 @@
         border: 2px solid rgba(0, 0, 0, 0.4);
         cursor: pointer;
         border-radius: 10px;
+        filter: drop-shadow(2px 2px 2px transparent);
+        transition: all 0.5s;
+        &:hover {
+          filter: drop-shadow(2px 2px 2px #000000);
+        }
         
-        &__dark{
+        &__dark {
           border: 2px solid rgb(173 173 173 / 40%);
+          &:hover {
+            filter: drop-shadow(2px 2px 2px #ffffff);
+          }
         }
       }
     }

@@ -6,7 +6,9 @@ const SocialMedia = ({ isBurger, darkMode }) => {
   return (
     <div className={`${isBurger ? "social-media__burger" : "social-media"} `}>
       <FaLinkedin
-        className="social-media__icons"
+        className={`social-media__icons ${
+          darkMode && "social-media__icons__dark"
+        }`}
         color={!darkMode && "#000000"}
         size={35}
         onClick={() =>
@@ -14,7 +16,9 @@ const SocialMedia = ({ isBurger, darkMode }) => {
         }
       />
       <FaGithub
-        className="social-media__icons"
+        className={`social-media__icons ${
+          darkMode && "social-media__icons__dark"
+        }`}
         size={35}
         color={!darkMode && "#000000"}
         onClick={() => window.open(`https://github.com/mjusbicher`, "_blank")}

@@ -14,6 +14,8 @@ i18n.use(initReactI18next).init({
         navbarAbout: "ABOUT ME",
         navbarExperience: "EXPERIENCE",
         navbarProjects: "PROJECTS",
+        navbarPopoverTheme: "Theme toggle",
+        navbarPopoverLanguage: "Switch language",
         title: "Hi! My name is",
         description:
           "I'm a 25 years old Full Stack Developer from Buenos Aires, Argentina.",
@@ -58,6 +60,8 @@ i18n.use(initReactI18next).init({
         navbarAbout: "ACERCA DE MÍ",
         navbarExperience: "EXPERIENCIA",
         navbarProjects: "PROYECTOS",
+        navbarPopoverTheme: "Alternar tema",
+        navbarPopoverLanguage: "Cambiar lenguaje",
         title: "Hola! Mi nombre es",
         description:
         "Tengo 25 años y soy un Desarrollador Full Stack de Buenos Aires, Argentina",

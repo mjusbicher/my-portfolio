@@ -1,5 +1,5 @@
-.social-media{
-  &__burger{
+.social-media {
+  &__burger {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -21,7 +21,12 @@
     transition: all 0.5s;
 
     &:hover {
-      filter: drop-shadow(2px 2px 2px #ffffff);
+      filter: drop-shadow(2px 2px 2px #000000);
+    }
+    &__dark {
+      &:hover {
+        filter: drop-shadow(2px 2px 2px #ffffff);
+      }
     }
   }
 }
